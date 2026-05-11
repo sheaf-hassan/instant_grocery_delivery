@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <BikeIcon className="size-6 text-white" />
-              <span className="text-xl font-semibold">
+              <span className="text-sm font-semibold">
                 {footerData.brand.name}
               </span>
             </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
           {/* Dynamic Section */}
           {footerData.sections.map((section, i) => (
             <div key={i}>
-              <h3 className="text-sm font-semibold uppercase mb-4">
+              <h3 className="text-sm font-semibold  mb-4">
                 {section.title}
               </h3>
               <ul className="space-y-2.5">
@@ -66,7 +66,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-sm font-semibold uppercase mb-4">Contact Us</h3>
+            <h3 className="text-sm font-semibold  mb-4">Contact Us</h3>
             <ul className="space-y-3">
                 {footerData.contact.map((item, i)=>{
                     const Icon = item.icon;
