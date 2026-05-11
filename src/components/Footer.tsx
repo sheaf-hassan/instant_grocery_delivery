@@ -82,7 +82,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div></div>
+        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p className="text-sm text-white/50">{footerData.bottom.copyright}</p>
+
+                <div className="flex gap-4">
+                    {footerData.bottom.links.map((link, i)=>(
+                        <a key={i} href={link.href} className="text-xs text-white/50 hover:text-White/70">{link.label}</a>
+                    ))}
+                </div>
+        </div>
       </div>
     </footer>
   );
