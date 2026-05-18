@@ -8,7 +8,7 @@ import ProductPage from "./pages/ProductPage";
 import SearchResults from "./pages/SearchResults";
 import FlashDeals from "./pages/FlashDeals";
 import Checkout from "./pages/Checkout";
-import MyOrder from "./pages/MyOrder";
+import MyOrders from "./pages/MyOrders";
 import OrderTracking from "./pages/OrderTracking";
 import Address from "./pages/Address";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -41,7 +41,7 @@ const App = () => {
           <Route path="deals" element={<FlashDeals />} />
           <Route element={<ProtectedRoute />}>
             <Route path="Checkout" element={<Checkout />} />
-            <Route path="orders" element={<MyOrder />} />
+            <Route path="orders" element={<MyOrders />} />
             <Route path="orders/:id" element={<OrderTracking />} />
             <Route path="address" element={<Address />} />
           </Route>
