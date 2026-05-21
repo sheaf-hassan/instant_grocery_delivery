@@ -5,6 +5,7 @@ import { MapPinIcon, PlusIcon } from "lucide-react";
 import Loading from "../components/Loading";
 import Checkout from './Checkout';
 import AddressCard from "../components/AddressCard";
+import AddressForm from "../components/AddressForm";
 
 
 const Addresses = () => {
@@ -65,7 +66,7 @@ const Addresses = () => {
         </div>
 
         {/* Form Modal */}
-
+        {showForm && <AddressForm resetForm={resetForm} handleSubmit={handleSubmit} form={form} setForm={setForm} editingId={editingId}/>}
 
         {/* Addresses list */}
         {
