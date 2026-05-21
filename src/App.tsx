@@ -10,7 +10,7 @@ import FlashDeals from "./pages/FlashDeals";
 import Checkout from "./pages/Checkout";
 import MyOrders from "./pages/MyOrders";
 import OrderTracking from "./pages/OrderTracking";
-import Address from "./pages/Address";
+import Addresses from "./pages/Addresses";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
@@ -43,7 +43,7 @@ const App = () => {
             <Route path="Checkout" element={<Checkout />} />
             <Route path="orders" element={<MyOrders />} />
             <Route path="orders/:id" element={<OrderTracking />} />
-            <Route path="address" element={<Address />} />
+            <Route path="addresses" element={<Addresses />} />
           </Route>
         </Route>
       </Routes>
