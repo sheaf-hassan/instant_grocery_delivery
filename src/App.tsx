@@ -40,7 +40,7 @@ const App = () => {
           <Route path="search" element={<SearchResults />} />
           <Route path="deals" element={<FlashDeals />} />
           <Route element={<ProtectedRoute />}>
-            <Route path="Checkout" element={<Checkout />} />
+            <Route path="checkout" element={<Checkout />} />
             <Route path="orders" element={<MyOrders />} />
             <Route path="orders/:id" element={<OrderTracking />} />
             <Route path="addresses" element={<Addresses />} />
