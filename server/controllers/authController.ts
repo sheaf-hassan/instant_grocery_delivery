@@ -33,7 +33,7 @@ export const register = async (req:Request, res:Response) =>{
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = await prisma.user.create({
-        data: {name, email: email.toLowerCae(), password: hashedPassword}
+        data: {name, email: email.toLowerCase(), password: hashedPassword}
     });
 
     const token = generateToken(user.id)

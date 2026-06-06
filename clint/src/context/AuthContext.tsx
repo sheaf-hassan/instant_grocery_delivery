@@ -5,6 +5,7 @@ import api from "../config/api";
 import toast from "react-hot-toast";
 
 
+
 interface AuthContextType {
     user: User | null;
     token: string | null;
@@ -93,5 +94,5 @@ export function AuthProvider({children} : {children: ReactNode}){
 export function useAuth(){
     const context = useContext(AuthContext)
     if(!context) throw new Error("useAuth must be used within AuthProvider");
-    return context
+    return context;
 }

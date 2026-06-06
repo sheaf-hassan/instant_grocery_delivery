@@ -1,12 +1,13 @@
-import { ArrowUpRightIcon, BikeIcon, ChevronDown, ChevronDownIcon, LogOut, MapIcon, MapPinIcon, MenuIcon, PackageIcon, SearchIcon, ShieldIcon, ShoppingCart, UserIcon, XIcon } from "lucide-react";
+import { ArrowUpRightIcon, BikeIcon, ChevronDownIcon, LogOut, MapPinIcon, MenuIcon, PackageIcon, SearchIcon, ShieldIcon, ShoppingCart, UserIcon, XIcon } from "lucide-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useAuth } from "../context/AuthContext";
 
 
 const Navbar = () => {
 
-  const  user: any = {name: "Md. Sheaf", email: "sheaf@example.com", isAdmin: true};
+  const {user, logout} = useAuth()
   const {cartCount, setIsCartOpen} = useCart()
   const [searchQuery, setSearchQuery] = useState("");
   const [userMenuOpen, setUserMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ const Navbar = () => {
   };
 
   const handleLogout = () =>{
+    logout()
     setUserMenuOpen(false)
     navigate("/");
   };
