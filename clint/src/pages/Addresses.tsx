@@ -47,7 +47,7 @@ const Addresses = () => {
               lng: position.coords.longitude,
             })
           },
-          (error, any)=>{
+          (error: any)=>{
             if(retries > 0){
               retries--;
               setTimeout(attempt, 1000)
