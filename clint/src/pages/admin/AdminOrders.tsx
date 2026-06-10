@@ -13,7 +13,7 @@ export default function AdminOrders() {
     const [partners, setPartners] = useState<DeliveryPartner[]>([]);
     const [loading, setLoading] = useState(true);
     const [assignModal, setAssignModal] = useState<string | null>(null);
-    const [selectedPartner, setSelectedPartner] = useState("");
+    const [selectedPartner, setSelectedPartner] = useState<string | null>(null);
 
     const fetchOrders = async () => {
         try {
