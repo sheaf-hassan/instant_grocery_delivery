@@ -4,7 +4,7 @@ A full-stack grocery delivery platform built with React, TypeScript, Node.js, Ex
 
 ## Project Preview
 
-<img src="images/instant-grocery-preview" alt="Instant Grocery Delivery" width="900"/>
+<img src="images/instant-grocery-preview.png" alt="Instant Grocery Delivery" width="900"/>
 
 ## Features
 
